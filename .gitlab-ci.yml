@@ -1,4 +1,9 @@
 image: maven:3.2-jdk-7
 
 build:
-  script: "cd zh-l16;mvn install -B"
+  script: 
+    - cd zh-l16
+    - mvn install -B
+  artifacts:
+    paths:
+     - target/
