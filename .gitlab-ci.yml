@@ -6,4 +6,4 @@ build:
     - mvn install -B
   artifacts:
     paths:
-     - target/
+     - zh-l16/target/
