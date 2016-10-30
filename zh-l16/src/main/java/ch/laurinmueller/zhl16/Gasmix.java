@@ -65,8 +65,12 @@ public class Gasmix implements Serializable {
 
 	@Override
 	public String toString() {
-		String gasmixString = "O2: " + (o2 * 100) + " %, N2: " + (n2 * 100) + " %, He: " + (he * 100) + " %";
+		String gasmixString = getAsShortString();
 		return name != null ? name + ", " + gasmixString : gasmixString;
+	}
+
+	public String getAsShortString() {
+		return "O2: " + (o2 * 100) + " %, N2: " + (n2 * 100) + " %, He: " + (he * 100) + " %";
 	}
 
 }
