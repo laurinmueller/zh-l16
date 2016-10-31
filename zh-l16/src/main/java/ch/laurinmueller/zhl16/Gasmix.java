@@ -24,7 +24,7 @@ public class Gasmix implements Serializable {
 			Gasmix.NITROX_40 = new Gasmix(0.40, 0.60, 0, "Nitrox 40");
 			PREDIFINED_MIXES.add(NITROX_40);
 			Gasmix.TRIOX_21_35 = new Gasmix(0.21, 0.44, 0.35, "Triox 21/35");
-			PREDIFINED_MIXES.add(NITROX_40);
+			PREDIFINED_MIXES.add(TRIOX_21_35);
 			Gasmix.OXYGEN_100 = new Gasmix(1.0, 0, 0, "Oxygen Pure");
 			PREDIFINED_MIXES.add(OXYGEN_100);
 		} catch (InvalidGasmixException e) {
