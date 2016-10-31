@@ -30,7 +30,7 @@ public class Calculator {
 	}
 
 	public Result getResult() throws DecoLimitViolationException {
-		Result result = new Result(resultDiveProfile, pressureOnSurface);
+		Result result = new Result(resultDiveProfile, pressureOnSurface, compartmentDefinition);
 
 		double pigN2T0 = (pressureOnSurface - settings.getPsH2O()) * Gasmix.AIR.getN2();
 		double pigHeT0 = (pressureOnSurface - settings.getPsH2O()) * Gasmix.AIR.getHe();
