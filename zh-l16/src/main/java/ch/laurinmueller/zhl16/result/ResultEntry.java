@@ -15,12 +15,6 @@ public class ResultEntry {
 
 	Map<Compartment, Snapshot> compartementSnapshot = new HashMap<>();
 
-	public List<Compartment> getCompartments() {
-		List<Compartment> arrayList = new ArrayList<>(compartementSnapshot.keySet());
-		Collections.sort(arrayList, new CompartmentComparer());
-		return arrayList;
-	}
-
 	private Result result;
 
 	public Snapshot getSnapshot(Compartment compartment) {
@@ -71,6 +65,10 @@ public class ResultEntry {
 		this.result = result;
 	}
 
+	public Result getResult() {
+		return result;
+	}
+
 	/**
 	 * gets the compartment which determines the minimum Depth
 	 * 
@@ -107,5 +105,11 @@ public class ResultEntry {
 		}
 		return determiningEntry;
 
+	}
+
+	public List<Compartment> getCompartments() {
+		List<Compartment> arrayList = new ArrayList<>(compartementSnapshot.keySet());
+		Collections.sort(arrayList, new CompartmentComparer());
+		return arrayList;
 	}
 }
