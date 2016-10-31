@@ -1,15 +1,26 @@
 package ch.laurinmueller.zhl16.result;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 
 import ch.laurinmueller.zhl16.kompartiment.Compartment;
+import ch.laurinmueller.zhl16.kompartiment.CompartmentComparer;
 
 public class ResultEntry {
 	private double deltaT;
 
 	Map<Compartment, Snapshot> compartementSnapshot = new HashMap<>();
+
+	public List<Compartment> getCompartments() {
+		List<Compartment> arrayList = new ArrayList<>(compartementSnapshot.keySet());
+		Collections.sort(arrayList, new CompartmentComparer());
+		return arrayList;
+	}
+
 	private Result result;
 
 	public Snapshot getSnapshot(Compartment compartment) {
