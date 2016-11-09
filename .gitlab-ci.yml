@@ -13,3 +13,7 @@ build:
   artifacts:
     paths:
      - zh-l16/target/
+     
+test-deploy:
+    stage: test
+    script: echo "DEPLOYING TO TEST"
