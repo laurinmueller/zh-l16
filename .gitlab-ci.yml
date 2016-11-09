@@ -15,5 +15,6 @@ build:
      - zh-l16/target/
      
 deploy to test:
+    environment: test
     stage: test
     script: echo "DEPLOYING TO TEST"
