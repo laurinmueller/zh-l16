@@ -1,6 +1,12 @@
 image: maven:3.2-jdk-7
 
+stages:
+  - build
+  - test
+  - deploy
+
 build:
+  stage: build
   script: 
     - cd zh-l16
     - mvn install -B
