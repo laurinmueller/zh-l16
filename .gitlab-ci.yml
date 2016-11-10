@@ -14,8 +14,14 @@ build:
     paths:
      - zh-l16/target/
      
-deploy to test:
+deploy to test1:
     when: manual
-    environment: test
+    environment: test1
     stage: test
-    script: echo "DEPLOYING TO TEST"
+    script: echo "DEPLOYING TO TEST1"
+    
+deploy to test2:
+    when: manual
+    environment: test2
+    stage: test
+    script: echo "DEPLOYING TO TEST2"
