@@ -24,4 +24,4 @@ deploy to test2:
     when: manual
     environment: test2
     stage: test
-    script: echo "DEPLOYING TO TEST2 yeaa"
+    script: echo "DEPLOYING TO TEST2"
