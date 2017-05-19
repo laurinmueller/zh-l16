@@ -76,4 +76,42 @@ public class Gasmix implements Serializable {
 		return "O2: " + (o2 * 100) + " %, N2: " + (n2 * 100) + " %, He: " + (he * 100) + " %";
 	}
 
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		long temp;
+		temp = Double.doubleToLongBits(he);
+		result = prime * result + (int) (temp ^ (temp >>> 32));
+		temp = Double.doubleToLongBits(n2);
+		result = prime * result + (int) (temp ^ (temp >>> 32));
+		result = prime * result + ((name == null) ? 0 : name.hashCode());
+		temp = Double.doubleToLongBits(o2);
+		result = prime * result + (int) (temp ^ (temp >>> 32));
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Gasmix other = (Gasmix) obj;
+		if (Double.doubleToLongBits(he) != Double.doubleToLongBits(other.he))
+			return false;
+		if (Double.doubleToLongBits(n2) != Double.doubleToLongBits(other.n2))
+			return false;
+		if (name == null) {
+			if (other.name != null)
+				return false;
+		} else if (!name.equals(other.name))
+			return false;
+		if (Double.doubleToLongBits(o2) != Double.doubleToLongBits(other.o2))
+			return false;
+		return true;
+	}
+
 }

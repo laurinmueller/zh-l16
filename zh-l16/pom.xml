@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>ch.laurinmueller</groupId>
 	<artifactId>zh-l16</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.1.0-SNAPSHOT</version>
 	<build>
 		<plugins>
 			<plugin>
@@ -15,8 +15,19 @@
 				</configuration>
 			</plugin>
 		</plugins>
-
 	</build>
+
+	<distributionManagement>
+		<snapshotRepository>
+			<id>nexus-snapshots</id>
+			<url>http://192.168.0.200:8081/nexus/content/repositories/snapshots</url>
+		</snapshotRepository>
+
+		<repository>
+			<id>nexus-releases</id>
+			<url>http://192.168.0.200:8081/nexus/content/repositories/releases</url>
+		</repository>
+	</distributionManagement>
 
 	<dependencies>
 		<dependency>

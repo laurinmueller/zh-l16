@@ -84,8 +84,8 @@ public class ResultEntry {
 	}
 
 	/**
-	 * gets the compartment which determines the minimum Depth with considartion
-	 * of the gradient-factors
+	 * gets the compartment which determines the minimum Depth with
+	 * consideration of the gradient-factors
 	 * 
 	 * @return
 	 */
