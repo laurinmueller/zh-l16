@@ -2,8 +2,6 @@ image: maven:3.6.0-jdk-8
 
 stages:
   - build
-  - test
-  - deploy
 
 build:
   stage: build
@@ -12,16 +10,4 @@ build:
     - mvn install
   artifacts:
     paths:
-     - /zh-l16/zh-l16/target/
-     
-deploy to test1:
-    when: manual
-    environment: test1
-    stage: test
-    script: echo "DEPLOYING TO TEST1"
-    
-deploy to test2:
-    when: manual
-    environment: test2
-    stage: test
-    script: echo "DEPLOYING TO TEST2"
+     - zh-l16/target/
