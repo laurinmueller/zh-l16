@@ -9,10 +9,10 @@ build:
   stage: build
   script: 
     - cd zh-l16
-    - mvn install -B
+    - mvn install
   artifacts:
     paths:
-     - zh-l16/target/
+     - /zh-l16/zh-l16/target/
      
 deploy to test1:
     when: manual
