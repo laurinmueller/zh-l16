@@ -23,17 +23,17 @@
 		<maven.compiler.target>1.7</maven.compiler.target>
 	</properties>
 
-	<distributionManagement>
-		<snapshotRepository>
-			<id>nexus-snapshots</id>
-			<url>http://192.168.0.200:8081/nexus/content/repositories/snapshots</url>
-		</snapshotRepository>
+<!-- 	<distributionManagement> -->
+<!-- 		<snapshotRepository> -->
+<!-- 			<id>nexus-snapshots</id> -->
+<!-- 			<url>http://192.168.0.200:8081/nexus/content/repositories/snapshots</url> -->
+<!-- 		</snapshotRepository> -->
 
-		<repository>
-			<id>nexus-releases</id>
-			<url>http://192.168.0.200:8081/nexus/content/repositories/releases</url>
-		</repository>
-	</distributionManagement>
+<!-- 		<repository> -->
+<!-- 			<id>nexus-releases</id> -->
+<!-- 			<url>http://192.168.0.200:8081/nexus/content/repositories/releases</url> -->
+<!-- 		</repository> -->
+<!-- 	</distributionManagement> -->
 
 	<dependencies>
 		<dependency>
